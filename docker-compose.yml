@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+
+  cdk:
+    build:
+      context: .
+      args:
+        AWS_CDK_VERSION: '2.1.0'
+    volumes:
+    - ~/.aws:/root/.aws
+    - .:/opt/app:rw
